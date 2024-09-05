@@ -1,0 +1,24 @@
+2024-09-04 11:27:33,613 :: INFO :: Bluetooth connection started
+2024-09-04 11:27:33,680 :: ERROR :: Error in Bluetooth link connection: [Errno 13] Permission denied
+2024-09-04 11:46:44,990 :: INFO :: Bluetooth connection started
+2024-09-04 11:46:45,021 :: ERROR :: Error in Bluetooth link connection: [Errno 13] Permission denied
+2024-09-04 11:48:33,105 :: INFO :: Bluetooth connection started
+2024-09-04 11:48:33,133 :: ERROR :: Error in Bluetooth link connection: [Errno 13] Permission denied
+2024-09-04 11:53:10,776 :: INFO :: Bluetooth connection started
+2024-09-04 11:53:10,804 :: ERROR :: Error in Bluetooth link connection: [Errno 13] Permission denied
+2024-09-04 11:59:02,067 :: INFO :: Bluetooth connection started
+2024-09-04 11:59:02,130 :: ERROR :: Error in Bluetooth link connection: [Errno 13] Permission denied
+2024-09-04 16:04:47,360 :: INFO :: Bluetooth connection started
+2024-09-04 16:04:47,395 :: ERROR :: Error in Bluetooth link connection: [Errno 13] Permission denied
+2024-09-04 16:05:27,410 :: INFO :: Bluetooth connection started
+2024-09-04 16:05:27,445 :: ERROR :: Error in Bluetooth link connection: [Errno 13] Permission denied
+2024-09-04 16:34:52,898 :: INFO :: Bluetooth connection started
+2024-09-04 16:34:52,928 :: ERROR :: Error in Bluetooth link connection: [Errno 13] Permission denied
+2024-09-04 16:34:57,693 :: INFO :: Bluetooth connection started
+2024-09-04 16:34:57,721 :: ERROR :: Error in Bluetooth link connection: [Errno 13] Permission denied
+2024-09-04 16:35:18,531 :: INFO :: Bluetooth connection started
+2024-09-04 16:35:18,565 :: ERROR :: Error in Bluetooth link connection: [Errno 13] Permission denied
+2024-09-04 16:35:35,291 :: INFO :: Bluetooth connection started
+2024-09-04 16:35:35,326 :: ERROR :: Error in Bluetooth link connection: [Errno 13] Permission denied
+2024-09-04 16:36:40,653 :: INFO :: Bluetooth connection started
+2024-09-04 16:36:40,698 :: INFO :: Awaiting Bluetooth connection on RFCOMM CHANNEL 2

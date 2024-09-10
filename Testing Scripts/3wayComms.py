@@ -1,6 +1,7 @@
 from communication.link import Link
 from communication.stm32 import STMLink
 from communication.android import AndroidLink  # Ensure this import is correct
+import json
 
 def main():
     print("rpiAndroidTest Initialized")
@@ -26,11 +27,23 @@ def main():
             # Test receiving a message from Android
             received_message = link.recv()
             print(f"Received: {received_message}")
+            r_message: dict = json.loads(received_message)
+            # If received message is a command
+            if message['cat'] == 'info':
+                movement_command = r_message['value']
+                print(f"Movement Command: {movement_command}")
 
-            # Test sending a command to STM32
-            test_command = "FW01"  # Move forward 1 unit as an example command
+
+            # Send using message received from android
+            print(f"Sending command to STM32: {movement_command}")
+            stm_link.send(movement_command)
+
+            ''' 
+            # send direct from rpi  
+            test_command = "FW01"     
             print(f"Sending command to STM32: {test_command}")
-            stm_link.send(test_command)
+            stm_link.send(test_command) 
+            '''
             
             # Wait for acknowledgment from STM32
             ack = stm_link.recv()

@@ -1,0 +1,13 @@
+Communication between rpi and stm32
+
+- configure serial_port and baud_rate (in settings)
+
+__init__(self): initialise class/object
+
+connnect(self): connect to stm32 using serial UART connection, print msg connected
+
+disconnect(self): disconnect ^^, print disconnected
+
+send(self, msg: str) -> None: send msg to stm32(encoded utf-8), print sent to stm32 - msg
+
+recv(self)-> Optional[str]: receive msg from stm 32, print received msg, return msg

@@ -1,0 +1,48 @@
+android communication
+
+Class for communicating with Android tablet over Bluetooth connection.
+
+Class AndroidMessage: 
+
+(For sending message)
+
+__init__(self, cat: str, value: str): initilise class, category and value
+
+cat(self): return category
+
+value(self): return value
+
+jsonify(self)->str: return message in {'cat':self._cat, 'value':self._value} as a json string
+
+
+
+
+Class AndroidLink(Link):
+
+(For initialising the link between RPI and android)
+
+ ## General Format
+    Messages between the Android app and Raspi will be in the following format:
+    ```json
+    {"cat": "xxx", "value": "xxx"}
+    ```
+
+    The `cat` (for category) field with the following possible values:
+    - `info`: general messages
+    - `error`: error messages, usually in response of an invalid action
+    - `location`: the current location of the robot (in Path mode)
+    - `image-rec`: image recognition results
+    - `mode`: the current mode of the robot (`manual` or `path`)
+    - `status`: status updates of the robot (`running` or `finished`)
+    - `obstacle`: list of obstacles 
+
+__init__(self): initiliase bluetooth connection - calls superclass constructor, set client/server.sock to None
+
+connect(self): print "bluetooth connection started", set RPI to discoverable, initialise server socket, retrieve set parameters port, uuid, advertise bluetooth service, wait for and accept client connection
+- to modify MDPGroup2 to MDPGroup46
+
+disconnect(self): disconnect bluetooth and shutdown all socket
+
+send(self, message:AndroidMessage): sends json message, print message sent
+
+recv(self) -> Optional[str]: receive and return msg -- string
